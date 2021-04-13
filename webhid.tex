@@ -80,16 +80,16 @@
   style=JSES6Base
 }
 
-\setcopyright{iw3c2w3}
-\copyrightyear{2021}
-\acmYear{2021}
-\acmConference[WWW '21 Companion]{Companion Proceedings of the Web Conference 2021}{April 19--23, 2021}{Ljubljana, Slovenia}
-\acmBooktitle{Companion Proceedings of the Web Conference 2021 (WWW '21 Companion), April 19--23, 2021, Ljubljana, Slovenia}
+\setcopyright{}
+\copyrightyear{2021. Licensed under a Creative Commons Attribution 4.0 International license.}
+\acmYear{}
+\acmConference{Thomas Steiner}
+\acmBooktitle{François Beaufort}
 \acmPrice{}
-\acmDOI{123-456-7890}
-\acmISBN{123-456-7890}
+\acmDOI{}
+\acmISBN{}
 
-\settopmatter{printacmref=true}
+\settopmatter{printacmref=false}
 
 \begin{document}
 
@@ -116,7 +116,7 @@
   \country{France}
 }
 
-\renewcommand{\shortauthors}{Thomas Steiner and François Beaufort}
+\renewcommand{\shortauthors}{}
 
 \begin{abstract}
 In this demonstration, we show how special hardware like Nintendo Joy-Con controllers
@@ -285,16 +285,16 @@ In response to a user prompt, the user must take active steps
 to select a particular \textsc{hid} device.
 More details about the security tradeoffs can be found in
 the Security and Privacy Considerations section of the Web\textsc{hid} spec~\cite{hid01}.
-Chrome---as the currently sole implementing user-agent---inspects
+Chromium---as the currently sole implementing engine with Chrome and Edge as example user-agents that ship this API---inspects
 the usage of each top-level collection,
 and if a top-level collection has a protected usage
 (\textit{e.g.}\ generic keyboard, mouse), then a website won't be able to send and receive
 any reports defined in that collection.
 The full list of protected usages is publicly
-available.\footnote{\url{https://source.chromium.org/chromium/chromium/src/+/master:services/device/public/cpp/hid/hid_usage_and_page.cc}}
+available.\footnote{\url{http://goo.gle/hid-usage-and-page_cc}}
 Security-sensitive \textsc{hid} devices
 (such as \textsc{fido} \textsc{hid} authentication devices)
-are blocked in Chrome.
+are blocked in Chrome.\footnote{\url{http://goo.gle/hid-blocklist_cc}}
 
 \section{Demonstration}
 
